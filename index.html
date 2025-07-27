@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GlobalCollect | Cross-Border Payments for Indian Exporters</title>
+    <style>
+        :root {
+            --primary: #4f46e5;
+            --secondary: #10b981;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --gray: #94a3b8;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #f1f5f9;
+            color: var(--dark);
+        }
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+        nav a {
+            margin-left: 2rem;
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+        }
+        .cta {
+            background-color: var(--primary);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 5px;
+            font-weight: 600;
+        }
+        .hero {
+            padding: 5rem 10%;
+            text-align: center;
+            background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%);
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--gray);
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+        .features {
+            padding: 5rem 10%;
+            background-color: white;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+        .feature-card {
+            background-color: var(--light);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        .feature-card h3 {
+            margin: 1rem 0;
+            color: var(--primary);
+        }
+        .dashboard-preview {
+            background-color: #f8fafc;
+            padding: 5rem 10%;
+            text-align: center;
+        }
+        .dashboard-mockup {
+            background-color: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            max-width: 1000px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        .dashboard-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .dashboard-nav a {
+            margin-left: 1.5rem;
+            text-decoration: none;
+            color: var(--gray);
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .stat-card {
+            background-color: #f1f5f9;
+            padding: 1.5rem;
+            border-radius: 8px;
+        }
+        .stat-card h3 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        .recent-payments {
+            background-color: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .status-pending {
+            color: #f59e0b;
+            background-color: #fef3c7;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+        }
+        .status-completed {
+            color: #10b981;
+            background-color: #d1fae5;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+        }
+        .status-in-transit {
+            color: #3b82f6;
+            background-color: #dbeafe;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+        }
+        .invoice-upload {
+            background-color: #f8fafc;
+            border: 2px dashed #cbd5e1;
+            padding: 2rem;
+            text-align: center;
+            border-radius: 8px;
+            margin-top: 1rem;
+            cursor: pointer;
+        }
+        .compliance-badge {
+            display: inline-block;
+            background-color: #ecfdf5;
+            color: #10b981;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-left: 0.5rem;
+        }
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 3rem 10%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">GlobalCollect</div>
+        <nav>
+            <a href="#features">Features</a>
+            <a href="#dashboard">Dashboard</a>
+            <a href="#compliance">Compliance</a>
+            <a href="#" class="cta">Get Started</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Seamless Cross-Border Payments for Indian Exporters</h1>
+        <p>Collect international payments faster, with lower fees, and zero compliance headaches.</p>
+        <a href="#dashboard" class="cta" style="display: inline-block; margin-top: 1rem;">View Demo Dashboard</a>
+    </section>
+
+    <section class="features" id="features">
+        <div class="section-title">
+            <h2>Must-Have MVP Features</h2>
+            <p>Built to solve your biggest payment collection pains</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <h3>Multi-Currency Wallet</h3>
+                <p>Receive USD, EUR, GBP directly—no intermediary banks. Funds settle in 1-2 days.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Real-Time Tracking</h3>
+                <p>See payment status (Pending/Completed/Failed) the moment buyers initiate transfers.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Auto Invoice Matching</h3>
+                <p>Upload invoices via PDF/Excel. AI matches payments automatically (90% accuracy).</p>
+            </div>
+            <div class="feature-card">
+                <h3>RBI/FEMA Compliance</h3>
+                <p>Auto-generated GR forms, FIRCs. Alerts for missing docs before submission.</p>
+            </div>
+            <div class="feature-card">
+                <h3>FX Rate Lock</h3>
+                <p>Lock exchange rates for 24-72 hours to avoid INR fluctuations.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Payment Analytics</h3>
+                <p>Export settlement history, track buyer payment trends.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="dashboard-preview" id="dashboard">
+        <div class="section-title">
+            <h2>Export Payment Dashboard</h2>
+            <p>Your control center for cross-border collections</p>
+        </div>
+        <div class="dashboard-mockup">
+            <div class="dashboard-header">
+                <h3>Payment Overview</h3>
+                <div class="dashboard-nav">
+                    <a href="#">Payments</a>
+                    <a href="#">Invoices</a>
+                    <a href="#">FX</a>
+                    <a href="#">Reports</a>
+                </div>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>$24,850</h3>
+                    <p>Pending Collections</p>
+                </div>
+                <div class="stat-card">
+                    <h3>$78,200</h3>
+                    <p>Received Last 30 Days</p>
+                </div>
+                <div class="stat-card">
+                    <h3>2.1 Days</h3>
+                    <p>Avg. Settlement Time</p>
+                </div>
+            </div>
+            
+            <!-- MVP Feature 1: Multi-Currency Balances -->
+            <div class="stat-card" style="margin-bottom: 1.5rem; text-align: left;">
+                <h3>Multi-Currency Wallet</h3>
+                <div style="display: flex; justify-content: space-between; margin-top: 1rem;">
+                    <div>
+                        <p style="color: var(--gray);">USD Balance</p>
+                        <h3>$15,200.00</h3>
+                    </div>
+                    <div>
+                        <p style="color: var(--gray);">EUR Balance</p>
+                        <h3>€8,750.00</h3>
+                    </div>
+                    <div>
+                        <p style="color: var(--gray);">GBP Balance</p>
+                        <h3>£5,300.00</h3>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- MVP Feature 2: Invoice Upload & Matching -->
+            <div class="recent-payments">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                    <h3 style="text-align: left;">Invoice Reconciliation</h3>
+                    <button class="cta" style="padding: 0.3rem 1rem; font-size: 0.9rem;">Upload Invoice</button>
+                </div>
+                <div class="invoice-upload">
+                    <p>Drag & drop PDF/Excel invoices here</p>
+                    <p style="color: var(--gray); font-size: 0.9rem;">AI will auto-match payments to invoices</p>
+                </div>
+            </div>
+            
+            <!-- MVP Feature 3: Real-Time Payment Tracking -->
+            <div class="recent-payments" style="margin-top: 1.5rem;">
+                <h3 style="text-align: left;">Recent Transactions</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Invoice #</th>
+                            <th>Buyer</th>
+                            <th>Amount</th>
+                            <th>Due Date</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>INV-2023-0452</td>
+                            <td>TextileCo Germany</td>
+                            <td>$12,500.00</td>
+                            <td>15 Nov 2023</td>
+                            <td><span class="status-completed">Completed</span></td>
+                        </tr>
+                        <tr>
+                            <td>INV-2023-0453</td>
+                            <td>FashionHub UK</td>
+                            <td>€8,750.00</td>
+                            <td>18 Nov 2023</td>
+                            <td><span class="status-in-transit">In Transit</span></td>
+                        </tr>
+                        <tr>
+                            <td>INV-2023-0454</td>
+                            <td>HomeDecor USA</td>
+                            <td>$3,600.00</td>
+                            <td>20 Nov 2023</td>
+                            <td><span class="status-pending">Pending</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- MVP Feature 4: Compliance Checks -->
+            <div class="recent-payments" style="margin-top: 1.5rem;" id="compliance">
+                <h3 style="text-align: left;">Compliance Status <span class="compliance-badge">RBI Approved</span></h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Document</th>
+                            <th>Status</th>
+                            <th>Last Verified</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>GSTIN</td>
+                            <td><span class="status-completed">Verified</span></td>
+                            <td>12 Nov 2023</td>
+                        </tr>
+                        <tr>
+                            <td>IEC Code</td>
+                            <td><span class="status-completed">Verified</span></td>
+                            <td>10 Nov 2023</td>
+                        </tr>
+                        <tr>
+                            <td>FEMA Declaration</td>
+                            <td><span class="status-completed">Submitted</span></td>
+                            <td>15 Nov 2023</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2023 GlobalCollect. All rights reserved.</p>
+        <p>Simplifying cross-border payments for Indian exporters</p>
+    </footer>
+</body>
+</html>
